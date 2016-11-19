@@ -1,5 +1,5 @@
 <div class="container">
-      <form class="form-signin" role="form" action="/rcon/index.php" method="POST">
+      <form class="form-signin" role="form" action="index.php" method="POST">
         <h2 class="form-signin-heading">Web RCON</h2>
 <?php
 if(!empty($_POST)){
@@ -12,7 +12,7 @@ try{
       $_SESSION['s'] = $_POST['s'];
       $_SESSION['p'] = $_POST['p'];
       $_SESSION['port'] = $_POST['port'];
-      header("Location: http://mcpe.me/rcon/index.php");
+      header("Location: index.php");
 }
 catch( Exception $e ){
   echo fail($e->getMessage());
